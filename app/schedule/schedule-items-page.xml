@@ -8,8 +8,9 @@
 
     <ListView items="{{ items }}">
         <ListView.itemTemplate>
-            <StackLayout orientation="horizontal">
-                <Label text="{{ name }}" textWrap="true"></Label>
+            <StackLayout orientation="vertical">
+                <Label text="{{ xxx || 'colazione' }}" textWrap="true"></Label>
+                <Label text="{{ xxx || '8:00 - 9:00 Caffè degli specchi' }}" textWrap="true"></Label>
             </StackLayout>
         </ListView.itemTemplate>
     </ListView>
