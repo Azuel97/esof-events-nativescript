@@ -1,17 +1,18 @@
 <Page
     navigatingTo="onNavigatingTo"
-    xmlns="http://schemas.nativescript.org/tns.xsd">
+    xmlns:lv="nativescript-ui-listview">
 
     <ActionBar class="schedule">
         <Label text="Schedule"></Label>
     </ActionBar>
 
-    <ListView items="{{ items }}">
-        <ListView.itemTemplate>
-            <StackLayout orientation="vertical">
-                <Label text="{{ xxx || 'colazione' }}" textWrap="true"></Label>
-                <Label text="{{ xxx || '8:00 - 9:00 Caffè degli specchi' }}" textWrap="true"></Label>
+    <lv:RadListView items="{{ items }}" groupingFunction="{{ myGroupingFunc }}">
+        <lv:RadListView.itemTemplate>
+            <StackLayout orientation="vertical" class="list-group-item">
+                <Label text="{{ nome }}" textWrap="true" class="border-list" font-size="16"></Label>
+                <Label text="{{ sub }}" textWrap="true" class="border-list sub" font-size="12"></Label>
             </StackLayout>
-        </ListView.itemTemplate>
-    </ListView>
+        </lv:RadListView.itemTemplate>
+    </lv:RadListView>
+
 </Page>
