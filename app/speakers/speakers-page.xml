@@ -1,13 +1,61 @@
 <Page
+    class="page-speakers"
     navigatingTo="onNavigatingTo"
     xmlns="http://schemas.nativescript.org/tns.xsd">
 
-    <ActionBar backgroundColor="#0cd1e8">
+    <ActionBar class="speakers">
         <Label text="Speakers"></Label>
     </ActionBar>
 
-    <GridLayout class="page__content">
-        <Label class="page__content-icon far" text="&#xf500;"></Label>
-        <Label class="page__content-placeholder" text="{{name}}"></Label>
-    </GridLayout>
+    <!--<ListView>
+    <StackLayout orientation="vertical">
+        <Label text="{{ name }}"></Label>
+        <Label text="{{ subtitle }}"></Label>
+        <Button class="-primary" text="Tap" tap="onTap"></Button>
+    </StackLayout>-->
+
+    <!--<ListView items="{{ items }}">
+      <ListView.itemTemplate>
+        <StackLayout class="wrap1" width="300" height="200" borderRadius="20">
+            <StackLayout class="list-group-item" orientation="horizontal">
+                <Image width="50"
+                     height="50"
+                     src="{{ img }}"
+                     stretch="aspectFill"
+                     borderRadius="100"
+                     class="avatar" ></Image>
+                <Label
+                    class="nome"
+                    text="{{ nome }}"></Label>
+            </StackLayout>
+            <StackLayout orientation="vertical">
+                    <Label class="prova"
+                        text="{{ intervento }}"></Label>
+                    <Label class="prova" text="{{desc}}"></Label>
+                </StackLayout>
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>-->
+
+    <StackLayout orientation="vertical">
+        <StackLayout orientation="vertical" class="cardView">
+            <StackLayout class="header" orientation="horizontal">
+                <Image
+                    borderRadius="100"
+                    src="https://www.netclipart.com/pp/m/120-1205442_download-bart-simpson-head-png.png"
+                    stretch="aspectFill"
+                    width="36"
+                    height="36"
+                />
+                <Label text="Mario Bianchi" fontSize="16"/>
+            </StackLayout>
+            <StackLayout class="content" orientation="vertical">
+                <Label text="Colazione" textWrap="true" />
+                <StackLayout class="separator" height="2" marginTop="5" marginBottom="5" backgroundColor="#bdbdbd" />
+                <Label text="Bla bla bla" textWrap="true" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+
 </Page>
