@@ -1,4 +1,5 @@
 <Page
+    class="info"
     navigatingTo="onNavigatingTo"
     xmlns="http://schemas.nativescript.org/tns.xsd">
 
@@ -6,8 +7,23 @@
         <Label text="Information"></Label>
     </ActionBar>
 
-    <GridLayout class="page__content">
-        <Label class="page__content-icon fas" text="&#xf05a;"></Label>
-        <Label class="page__content-placeholder" text="{{name}}"></Label>
-    </GridLayout>
+    <StackLayout orientation="vertical">
+        <Image src="https://www.units.it/sites/default/files/styles/slideshow_1170x425/public/media/immagini/notizie/trieste10.jpg?itok=xm54wuX_" />
+        <Label text="ESOF 2020" textWrap="true" fontSize="22"/>
+        <StackLayout orientation="horizontal" class="metadata">
+            <Label class="far" text="&#xf3c5;" />
+            <Label text="Date" textWrap="true" fontSize="18" />
+            <Label text="11 06, 2020" textWrap="true" fontSize="18" />
+        </StackLayout>
+        <StackLayout orientation="horizontal" class="metadata">
+            <Label class="far" text="&#xf133;" />
+            <Label text="Location" textWrap="true" fontSize="18" />
+            <Label text="Trieste, Italy" textWrap="true" fontSize="18" />
+        </StackLayout>
+        <StackLayout margin="20">
+            <Label text="Trieste è stata scelta per l’organizzazione di ESOF 2020, la più rilevante manifestazione europea focalizzata sul dibattito tra scienza, tecnologia, società e politica. La manifestazione si svolgerà a Trieste da domenica 5 luglio a giovedì 9 luglio 2020. La candidatura è stata proposta dalla nostra Fondazione."
+                textWrap="true" fontSize="14" />
+        </StackLayout>
+    </StackLayout>
+
 </Page>

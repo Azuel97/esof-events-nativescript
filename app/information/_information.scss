@@ -1,0 +1,18 @@
+$scheduleColor: #e6e227;
+ActionBar.schedule {
+    background-color: $scheduleColor;
+}
+
+Page.info {
+    StackLayout {
+        Label,
+        StackLayout {
+            padding: 10;
+        }
+    }
+    .metadata {
+        Label {
+            margin: 0;
+        }
+    }
+}
