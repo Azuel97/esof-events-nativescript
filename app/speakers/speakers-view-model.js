@@ -12,7 +12,7 @@ function SpeakersViewModel() {
         items: redata,
     });
 
-    console.log(viewModel)
+    //console.log(viewModel)
     return viewModel;
 }
 

@@ -1,5 +1,10 @@
 const application = require("tns-core-modules/application");
 
+// Google Maps SDK - API KEY
+if(application.ios){
+    GMSServices.provideAPIKey("AIzaSyCuaTZ-vUIU76Yfw032umnabe_cp1y-EZc");
+}
+
 application.run({ moduleName: "app-root" });
 
 /*
