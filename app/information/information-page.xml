@@ -20,9 +20,10 @@
             <Label text="Location" textWrap="true" fontSize="18" />
             <Label text="Trieste, Italy" textWrap="true" fontSize="18" />
         </StackLayout>
-        <StackLayout margin="20">
+        <StackLayout margin="4">
             <Label text="Trieste è stata scelta per l’organizzazione di ESOF 2020, la più rilevante manifestazione europea focalizzata sul dibattito tra scienza, tecnologia, società e politica. La manifestazione si svolgerà a Trieste da domenica 5 luglio a giovedì 9 luglio 2020. La candidatura è stata proposta dalla nostra Fondazione."
                 textWrap="true" fontSize="14" />
+            <Button class="-outline -rounded-sm" text="Credits" tap="onTap" />
         </StackLayout>
     </StackLayout>
 
