@@ -8,8 +8,10 @@ function onNavigatingTo(args) {
 function onTap(args) {
     const button = args.object;
     const page = button.page;
-    page.frame.navigate("map/map-page");
-    //alert("FIRE")
+    //page.frame.navigate("information/credits/credits-page");
+    page.frame.navigate({
+        moduleName: "information/credits/credits-page",
+    });
 }
 
 exports.onTap = onTap;
