@@ -6,7 +6,7 @@
         <Label text="Schedule"></Label>
     </ActionBar>
 
-    <lv:RadListView items="{{ items }}" groupingFunction="{{ myGroupingFunc }}">
+    <lv:RadListView items="{{ items }}" >
         <lv:RadListView.itemTemplate>
             <StackLayout orientation="vertical" class="list-group-item">
                 <StackLayout class="wrap">
