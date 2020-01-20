@@ -11,7 +11,13 @@ firebase.init({
     // Optionally pass in properties for database, authentication and cloud messaging,
     // see their respective docs.
     iOSEmulatorFlush: true,  // Risolve bug del simulatore iOS (obbligatoria)
-    persist: false  // Disabilità proprietà offline (non-obbligatorio)
+    persist: false,  // Disabilità proprietà offline (non-obbligatorio)
+    onAuthStateChanged: function(data) {
+        console.log(data.loggedIn ? "Logged" : "Logged out")
+        if(data.loggedIn){
+            console.log("INIT USER", data)
+        }
+    }
   }).then(
       function () {
         console.log("firebase.init done");
