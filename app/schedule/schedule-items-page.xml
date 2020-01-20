@@ -3,9 +3,11 @@
     xmlns:lv="nativescript-ui-listview">
 
     <ActionBar class="schedule">
-        <Label text="Schedule"></Label>
+        <Label text="{{ isLogin }}"></Label>
+        <ActionItem tap="showDialog" ios.position="right" ios.systemIcon="17"></ActionItem>
     </ActionBar>
 
+    <GridLayout visibility="{{ isLogin ? 'visible' : 'collapsed' }}">
     <lv:RadListView items="{{ items }}" >
         <lv:RadListView.itemTemplate>
             <StackLayout orientation="vertical" class="list-group-item">
@@ -22,5 +24,6 @@
             </StackLayout>
         </lv:RadListView.itemTemplate>
     </lv:RadListView>
+    </GridLayout>
 
 </Page>

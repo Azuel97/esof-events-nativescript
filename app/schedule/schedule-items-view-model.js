@@ -18,8 +18,8 @@ schedule.get().then((document) => {
 
 function ScheduleItemsViewModel() {
     const viewModel = observableModule.fromObject({
-        items: myObservableArray
-
+        items: myObservableArray,
+        isLogin: false
     });
     return viewModel;
 }
