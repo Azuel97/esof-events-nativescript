@@ -38,6 +38,7 @@ firebase.getCurrentUser()
 
 */
 
+// Isolo il model, per avere il controllo su di esso in modod da poterlo modificare
 const viewModel = new ScheduleItemsViewModel();
 
 function onNavigatingTo(args) {
@@ -88,5 +89,25 @@ function showDialog() {
     });
 }
 
+const fn = firebase.functions.httpsCallable("helloNome")
+
+
 exports.onNavigatingTo = onNavigatingTo;
 exports.showDialog = showDialog;
+exports.showFunctions = function () {
+    fn("Firebase-from-NativeScript")
+        .then((myData) => {
+            alert({
+                title: "FIrebase Functions Output",
+                message: myData.messaggio,
+                okButtonText: "OK"
+            })
+        })
+        .catch((errorMessage) => {
+            alert({
+                title: "Errore",
+                message: errorMessage,
+                okButtonText: "Ok, thanks"
+            })
+        })
+};
